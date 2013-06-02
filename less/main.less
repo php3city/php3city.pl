@@ -1,0 +1,147 @@
+@import url(http://fonts.googleapis.com/css?family=Cuprum:400italic,700italic&subset=latin,latin-ext);
+@import "normalize";
+@import "layout";
+
+.top {
+    background: #9999cc;
+}
+
+@linkColor: #666699;
+
+::-webkit-selection {
+    background: @linkColor;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: @linkColor;
+    color: #fff;
+}
+
+::selection {
+    background: @linkColor;
+    color: #fff;
+}
+
+a {
+    color: @linkColor;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: darken(@linkColor, 15%);
+    }
+}
+
+@logoShadow: #c9cdd3;
+
+#logo {
+    display: block;
+    width: 111px;
+    margin: 0 auto;
+    padding-top: 80px;
+    background: url(../img/logo.png) no-repeat;
+    color: black;
+    font-family: Cuprum, sans-serif;
+    font-size: 2em;
+    font-style: italic;
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Cuprum, sans-serif;
+    font-style: italic;
+}
+
+.clearfix () {
+    zoom: 1;
+
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.meetings,
+.presentations {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+        margin-top: 1.5em;
+
+        a {
+            display: block;
+        }
+    }
+
+    .title {
+        display: inline-block;
+        margin: 0;
+        padding: 5px 6px 3px 6px;
+        background: #9999cc;
+        color: #fff;
+        font-size: 1.5em;
+        text-shadow: 0 1px 0 #666699;
+    }
+
+    .info {
+        .clearfix;
+
+        display: block;
+        color: #000;
+        padding-top: 15px;
+
+        img {
+            float: left;
+            width: 46px;
+            margin-right: 16px;
+            margin-top: -15px;
+            //border: 4px solid darken(@linkColor, 15%);
+        }
+    }
+}
+
+.sponsors {
+    .clearfix;
+
+    padding: 0;
+    list-style: none;
+
+    li {
+        margin: 1em 0;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .sponsors {
+        li {
+            float: left;
+            width: 31%;
+            margin-left: 3%;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        a {
+            display: block;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
