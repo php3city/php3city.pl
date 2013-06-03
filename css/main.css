@@ -41,6 +41,7 @@ table{border-collapse:collapse;border-spacing:0;}
 ::-webkit-selection{background:#666699;color:#fff;}
 ::-moz-selection{background:#666699;color:#fff;}
 ::selection{background:#666699;color:#fff;}
+img{max-width:100%;}
 a{color:#666699;text-decoration:none;}a:hover{text-decoration:underline;}
 a:active{color:#47476b;}
 #logo{display:block;width:111px;margin:0 auto;padding-top:80px;background:url(../img/logo.png) no-repeat;color:black;font-family:Cuprum,sans-serif;font-size:2em;font-style:italic;text-align:center;}
